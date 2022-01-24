@@ -36,6 +36,7 @@ export default {
   margin-bottom: 1rem;
 }
 .home{
+  margin-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }

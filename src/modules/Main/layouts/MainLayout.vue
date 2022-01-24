@@ -1,22 +1,32 @@
 <template>
-  <three-columns>
+  <two-columns-right>
     <template v-slot:header>
-      <p>Hello, it is header:)</p>
+      <Header></Header>
+    </template>
+    <template v-slot:logo>
+      <logo></logo>
     </template>
     <template v-slot:content>
       <slot>Default content</slot>
     </template>
-  </three-columns>
+    <template v-slot:sidebar>
+      <p>Hello, it is sidebar:)</p>
+    </template>
+  </two-columns-right>
 </template>
 
 <script>
 
-import ThreeColumns from "@/modules/Framework/layouts/ThreeColumns";
+import TwoColumnsRight from "../../Framework/layouts/TwoColumnsRight";
+import Header from "../components/header/Header";
+import Logo from "../components/header/Logo";
 
 export default {
   name: "MainLayout",
   components: {
-    ThreeColumns
+    TwoColumnsRight,
+    Header,
+    Logo
   }
 }
 </script>
