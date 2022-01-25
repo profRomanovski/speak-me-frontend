@@ -7,6 +7,10 @@
       <logo></logo>
     </template>
     <template v-slot:content>
+      <button  @click="isOpen=true">Open Menu1</button>
+      <Slide :isOpen="isOpen" :burgerIcon="false" noOverlay :closeOnNavigation="true"  @closeMenu="isOpen = false">
+        <p>Hello</p>
+      </Slide>
       <slot>Default content</slot>
     </template>
     <template v-slot:sidebar>
@@ -20,13 +24,20 @@
 import TwoColumnsRight from "../../Framework/layouts/TwoColumnsRight";
 import Header from "../components/header/Header";
 import Logo from "../components/header/Logo";
+import {Slide} from "vue3-burger-menu";
 
 export default {
   name: "MainLayout",
+  data() {
+    return {
+      isOpen: false
+    };
+  },
   components: {
     TwoColumnsRight,
     Header,
-    Logo
+    Slide,
+    Logo,
   }
 }
 </script>
