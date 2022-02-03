@@ -1,9 +1,9 @@
 import { createStore } from 'vuex'
-import post from "@/modules/Posts/store/post";
+import messages from "@/modules/Chat/store/messages";
 import sidebar from "@/modules/Main/store/sidebar";
 const store = createStore({
     modules: {
-        post,
+        messages,
         sidebar
     }
 })

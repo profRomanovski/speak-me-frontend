@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import postRoutes from "@/modules/Posts/router";
+import chatRouters from "@/modules/Chat/router";
 
 const baseRoutes = [
 
 ]
 
-const routes = baseRoutes.concat(postRoutes);
+const routes = baseRoutes.concat(chatRouters);
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

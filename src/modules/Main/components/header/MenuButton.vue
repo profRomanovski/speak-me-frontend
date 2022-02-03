@@ -21,6 +21,7 @@ export default {
 }
 .icon{
   cursor: pointer;
+  margin-left: 15px;
 }
 .icon:active{
   transform: scale(1.1);
