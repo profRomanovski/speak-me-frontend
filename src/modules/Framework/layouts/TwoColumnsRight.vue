@@ -41,6 +41,7 @@ export default {
 
   .sidebar {
     grid-area: sidebar;
+    min-width: 175px;
   }
 }
 @media (orientation: portrait) {
