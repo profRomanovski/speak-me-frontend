@@ -16,12 +16,12 @@ export default {
 
 <style scoped>
 .chat-container{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "message-list"
+                       "input-field";
+  grid-template-columns: 1fr;
+  grid-template-rows:  1fr 15%;
   overflow: hidden;
-  margin-top: 15px;
-  width: 100%;
+  background-color: #DCDCDC;
 }
 </style>

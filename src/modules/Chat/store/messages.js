@@ -19,7 +19,7 @@ export default {
             {
                 id: 3,
                 body: "Not sure. I'm bad. So, I will watch a film, than I will go for a walk. Maybe, after that" +
-                    "I will feel myself more better. However, how are you? нннннннннннннннннннннннннннннннннннннн",
+                    "I will feel myself more better. However, how are you? ннннннннннннннннннннннннн ннннннннннннн",
                 userId: 11
             },
             {

@@ -26,8 +26,14 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 1rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+  background-color: #C4CCDE;
 }
 .non-user{
   align-self: end;
+  background-color: #F5F6F3;
 }
 </style>

@@ -26,9 +26,9 @@ export default {
   align-items: start;
   overflow-y:scroll;
   overflow-x:hidden;
-  height: 500px;
-  width: 100%;
-  max-width: 1000px;
+  grid-area: message-list;
+  height: 525px;
+  margin-top: 10px;
 }
 .message-list::-webkit-scrollbar {
   display: none;

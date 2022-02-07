@@ -1,7 +1,7 @@
 <template>
 <div class="input-message-container">
   <textarea class="input"></textarea>
-  <icon class="icon" name="send"></icon>
+  <icon class="icon" color="#F5F6F3" name="send"></icon>
 </div>
 </template>
 
@@ -15,24 +15,31 @@ export default {
 
 <style scoped>
 .input-message-container{
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  grid-area: input-field;
+  border: 2px solid #ccc;
+  border-radius: 10px;
   margin-bottom: 1rem;
-  max-width: 1000px;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: #F5F6F3;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .input{
   width: 100%;
   height: 50px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #F5F6F3;
 }
 .icon{
-  margin-left: 10px;
+  margin-left: 5px;
+  padding: 3px;
+  background-color: #AABADD;
+  border-radius: 4px;
+  cursor: pointer;
 }
 </style>
