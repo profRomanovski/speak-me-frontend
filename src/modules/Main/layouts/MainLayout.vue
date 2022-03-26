@@ -25,7 +25,7 @@ import Header from "../components/header/Header";
 import Logo from "../components/header/Logo";
 import {mapActions, mapGetters} from "vuex";
 import Slide from "@/modules/Main/components/Slide";
-import Rooms from "@/modules/Chat/components/rooms/Rooms";
+import Rooms from "@/modules/Home/components/categories/Categories";
 
 export default {
   name: "MainLayout",
@@ -46,5 +46,7 @@ export default {
 </script>
 
 <style>
-
+body{
+  background-color: #DCDCDC;
+}
 </style>

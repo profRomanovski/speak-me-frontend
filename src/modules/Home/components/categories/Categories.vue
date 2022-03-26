@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import Search from "@/modules/Chat/components/rooms/Search";
-import CreateButton from "@/modules/Chat/components/rooms/CreateButton";
-import RoomsList from "@/modules/Chat/components/rooms/RoomsList";
+import Search from "@/modules/Home/components/categories/Search";
+import CreateButton from "@/modules/Home/components/categories/CreateButton";
+import RoomsList from "@/modules/Home/components/categories/CategoryList";
 export default {
-  name: "Rooms",
+  name: "Categories",
   components: {RoomsList, CreateButton, Search}
 }
 </script>

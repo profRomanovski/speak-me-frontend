@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import RoomItem from "@/modules/Chat/components/rooms/RoomItem";
+import RoomItem from "@/modules/Home/components/categories/CategoryItem";
 import {mapGetters} from "vuex";
 export default {
-  name: "RoomsList",
+  name: "CategoryList",
   components: {RoomItem},
   computed: {
     ...mapGetters(['allRooms'])

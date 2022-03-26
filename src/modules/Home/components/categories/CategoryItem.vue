@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "RoomItem",
+  name: "CategoryItem",
   data(){
     return {
       color: this.getRandomColor(),

@@ -1,4 +1,4 @@
-import Chat from "@/modules/Chat/views/Chat";
+import Chat from "@/modules/Home/views/Home";
 import Registration from "@/modules/User/views/Registration";
 import Login from "@/modules/User/views/Login";
 import Profile from "@/modules/User/views/Profile";

@@ -8,7 +8,7 @@
 
 <script>
 import {mapGetters} from "vuex";
-import ListItem from "@/modules/Chat/components/ListItem";
+import ListItem from "@/modules/Home/components/ListItem";
 
 export default {
   name: "MessageList",
