@@ -1,49 +1,57 @@
 <template>
-  <form class="card-form" v-on:submit.prevent="createCategory">
+  <form class="card-form" v-on:submit.prevent="loginUser">
     <div class="input">
-      <input v-model="name" type="text" class="input-field" required/>
-      <label class="input-label">Collection name</label>
+      <input v-model="email" type="text" class="input-field" required/>
+      <label class="input-label">Email</label>
     </div>
     <div class="input">
-      <image-uploader @uploaded="setImage"></image-uploader>
+      <input v-model="pass" type="password" class="input-field" required/>
+      <label class="input-label">Password</label>
     </div>
     <div class="action">
-      <button class="action-button">Create</button>
+      <button class="action-button">Sign in</button>
     </div>
   </form>
+  <div v-if="error" class="error">
+    {{message}}
+  </div>
+  <template v-if="getUserToken">
+
+  </template>
 </template>
 
 <script>
-import ImageUploader from "@/modules/Home/components/categories/create/ImageUploader";
-import categoryApi from "@/modules/Home/api/categoryAPI";
+import {mapGetters, mapMutations} from 'vuex';
+import authAPI from "@/modules/Auth/api/authAPI";
 import router from "@/modules/Framework/router";
-
 export default {
-  name: "CategoryForm",
-  components: {
-    ImageUploader
-  },
+  name: "LoginForm",
   data(){
     return{
-      name: null,
-      selectedFile: null,
-      image: null
-    };
+      email: "roman@gmail.com",
+      pass: null,
+      error: false,
+      message: null
+    }
   },
   methods: {
-    setImage(image){
-      this.image = image
-    },
-    createCategory(){
-      categoryApi.createCategory(this.name, this.image)
+    ...mapMutations(['setToken']),
+    loginUser(){
+      authAPI.login(this.email, this.pass)
       .then((res) => {
+        this.setToken(res.data.token)
         console.log(res.data)
         router.push("/")
       })
-      .catch((err) => {
-        console.log(err.message)
+      .catch((res) => {
+        console.log(res.message)
+        this.error = true
+        this.message = res.message
       })
     }
+  },
+  computed:{
+    ...mapGetters(['getUserToken']),
   }
 }
 </script>

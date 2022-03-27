@@ -3,20 +3,23 @@
     <div class="card">
       <div class="card-image">
         <h2 class="card-heading">
-          Create your own
-          <p>Collection</p>
+          Sing in
+          <small>Login to your account</small>
         </h2>
       </div>
-      <category-form></category-form>
+      <login-form></login-form>
+      <div class="card-info">
+        <p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import CategoryForm from "@/modules/Home/components/categories/create/CategoryForm";
+import LoginForm from "@/modules/Auth/components/Form/LoginForm";
 export default {
-  name: "CreateCategory",
-  components: {CategoryForm},
+  name: "Login",
+  components: {LoginForm}
 }
 </script>
 
@@ -63,9 +66,9 @@ input {
   border-radius: 8px;
   overflow: hidden;
   padding-bottom: 65%;
-  background-image: url("https://s11.favim.com/orig/7/781/7811/78110/quote-wallpapers-purple-aesthetic-Favim.com-7811064.jpg");
+  background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 150%;
   background-position: 0 5%;
   position: relative;
 }
@@ -77,7 +80,7 @@ input {
   right: 10%;
   font-size: 1.75rem;
   font-weight: 700;
-  color: rgba(242, 150, 10, 0.98);
+  color: #735400;
   line-height: 1.222;
 }
 .card-heading small {

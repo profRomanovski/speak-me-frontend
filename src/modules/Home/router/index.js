@@ -4,7 +4,7 @@ import CreateCategory from "@/modules/Home/views/CreateCategory";
 export default [
     {
         path: '/',
-        name: 'Chat',
+        name: 'Main',
         component: Chat,
         meta:{
             layout: "main"

@@ -1,8 +1,7 @@
 <template>
   <div class="content">
     <div class="navigation">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <auth-header></auth-header>
     </div>
     <menu-button></menu-button>
   </div>
@@ -10,9 +9,10 @@
 
 <script>
 import MenuButton from "@/modules/Main/components/header/MenuButton";
+import AuthHeader from "@/modules/Auth/components/Header/AuthHeader";
 export default {
   name: "Header",
-  components: {MenuButton}
+  components: {AuthHeader, MenuButton}
 }
 </script>
 
