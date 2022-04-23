@@ -1,18 +1,18 @@
 <template>
   <div class="content">
-    <div class="navigation">
+      <create-item-button></create-item-button>
       <auth-header></auth-header>
     </div>
     <menu-button></menu-button>
-  </div>
 </template>
 
 <script>
 import MenuButton from "@/modules/Main/components/header/MenuButton";
 import AuthHeader from "@/modules/Auth/components/Header/AuthHeader";
+import CreateItemButton from "@/modules/Products/components/header/CreateItemButton";
 export default {
   name: "Header",
-  components: {AuthHeader, MenuButton}
+  components: {CreateItemButton, AuthHeader, MenuButton}
 }
 </script>
 

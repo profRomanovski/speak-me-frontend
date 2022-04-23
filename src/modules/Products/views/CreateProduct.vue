@@ -4,19 +4,19 @@
       <div class="card-image">
         <h2 class="card-heading">
           Create your own
-          <p>Collection</p>
+          <p>Fashion item</p>
         </h2>
       </div>
-      <category-form></category-form>
+      <product-form></product-form>
     </div>
   </div>
 </template>
 
 <script>
-import CategoryForm from "@/modules/Home/components/categories/create/CategoryForm";
+import ProductForm from "@/modules/Products/components/form/ProductForm";
 export default {
-  name: "CreateCategory",
-  components: {CategoryForm},
+  name: "CreateProduct",
+  components: {ProductForm},
 }
 </script>
 

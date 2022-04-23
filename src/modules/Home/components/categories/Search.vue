@@ -1,5 +1,5 @@
 <template>
-  <h2>Rooms</h2>
+  <h2>Collections</h2>
   <input type="text" placeholder="Search">
 </template>
 

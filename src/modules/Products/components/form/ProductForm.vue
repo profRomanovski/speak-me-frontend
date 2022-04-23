@@ -1,8 +1,8 @@
 <template>
-  <form class="card-form" v-on:submit.prevent="createNewCategory">
+  <form class="card-form" v-on:submit.prevent="createNewProduct">
     <div class="input">
       <input v-model="name" type="text" class="input-field" required/>
-      <label class="input-label">Collection name</label>
+      <label class="input-label">Product name</label>
     </div>
     <div class="input">
       <image-uploader @uploaded="setImage"></image-uploader>
@@ -19,7 +19,7 @@ import router from "@/modules/Framework/router";
 import {mapActions} from "vuex";
 
 export default {
-  name: "CategoryForm",
+  name: "ProductForm",
   components: {
     ImageUploader
   },
@@ -31,20 +31,20 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['createCategory']),
+    ...mapActions(['createProduct']),
     setImage(image){
       this.image = image
     },
-    createNewCategory(){
+    createNewProduct(){
 
-      this.createCategory({'name': this.name, 'image': this.image})
-      .then((res) => {
-        console.log(res.data)
-        router.push("/")
-      })
-      .catch((err) => {
-        console.log(err.message)
-      })
+      this.createProduct({'name': this.name, 'image': this.image})
+          .then((res) => {
+            console.log(res.data)
+            router.push("/")
+          })
+          .catch((err) => {
+            console.log(err.message)
+          })
     }
   }
 }

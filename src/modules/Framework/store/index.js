@@ -1,15 +1,17 @@
 import { createStore } from 'vuex'
 import messages from "@/modules/Home/store/messages";
-import rooms from "@/modules/Home/store/rooms";
+import categories from "@/modules/Home/store/categories";
 import sidebar from "@/modules/Main/store/sidebar";
 import auth from "@/modules/Auth/store/auth";
+import products from "@/modules/Products/store/products";
 
 const store = createStore({
     modules: {
         messages,
         sidebar,
-        rooms,
-        auth
+        categories,
+        auth,
+        products
     }
 })
 export default store;

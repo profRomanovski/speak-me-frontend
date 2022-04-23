@@ -1,30 +1,32 @@
 <template>
-<div class="item">
-  <div class="numberCircle" :style="{'background': this.color}">{{char}}</div>
-  <div class="name">{{ room.name }}</div>
+<div class="item" v-on:click="categoryClick">
+  <div class="numberCircle" :style="{ 'background-image': `url('${hostname+'/'+category.image}`}"></div>
+  <div class="name">{{ category.name }}</div>
 </div>
 </template>
 
 <script>
+import config from "@/config";
+import {mapMutations, mapActions} from 'vuex';
 export default {
   name: "CategoryItem",
   data(){
     return {
-      color: this.getRandomColor(),
+      hostname: config.hostname
     }
   },
-  methods:{
-    getRandomColor(){
-      return  "#" + Math.floor(Math.random() * 16777215).toString(16)
+  methods: {
+    ...mapActions(['loadProducts']),
+    ...mapMutations(['setCategoryAuthorId', 'setCurrentCategoryId']),
+    categoryClick(){
+      console.log('cat id'+ this.category.id)
+      this.setCategoryAuthorId(this.category.user_id)
+      this.setCurrentCategoryId(this.category.id)
+      this.loadProducts(this.category.id)
     },
   },
   props:{
-    room: Object
-  },
-  computed:{
-    char: function (){
-      return this.room.name.charAt(0)
-    }
+    category: Object
   }
 }
 </script>
@@ -46,7 +48,8 @@ export default {
   border: 2px solid #666;
   color: #666;
   text-align: center;
-
+  background-size: 200%;
+  background-position: center;
   font: 32px Arial, sans-serif;
 }
 .name{

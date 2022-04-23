@@ -35,11 +35,12 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setToken']),
+    ...mapMutations(['setToken', 'setUserId']),
     loginUser(){
       authAPI.login(this.email, this.pass)
       .then((res) => {
         this.setToken(res.data.token)
+        this.setUserId(res.data.id)
         console.log(res.data)
         router.push("/")
       })

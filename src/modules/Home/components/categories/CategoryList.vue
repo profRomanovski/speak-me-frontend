@@ -1,19 +1,31 @@
 <template>
 <div class="list">
-  <template v-for="room in allRooms" :key="room.id">
-    <room-item :room="room"></room-item>
+  <template v-for="room in getCategories" :key="room.id">
+    <room-item :category="room"></room-item>
   </template>
 </div>
 </template>
 
 <script>
 import RoomItem from "@/modules/Home/components/categories/CategoryItem";
-import {mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
+
 export default {
   name: "CategoryList",
   components: {RoomItem},
-  computed: {
-    ...mapGetters(['allRooms'])
+  data(){
+    return{
+      categories: []
+    }
+  },
+  methods:{
+    ...mapActions(['loadCategories'])
+  },
+  computed:{
+    ...mapGetters(['getCategories'])
+  },
+  async mounted(){
+    await this.loadCategories()
   },
 }
 </script>
